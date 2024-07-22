@@ -76,6 +76,6 @@ In all the models we have used an Early-Stopping of patience 7 and monitor the v
 ![ConvNeXt Tiny](Resultados/PrediccionCNX.png)
 
 ## Bibliography
-1. **Preethi B Nair and Roberto G Abraham** _A catalog of detailed visual morphological
-classifications for 14,034 galaxies in the sloan digital sky survey._. The Astrophysical
+1. **Preethi B Nair and Roberto G Abraham.** _A catalog of detailed visual morphological
+classifications for 14,034 galaxies in the sloan digital sky survey._ The Astrophysical
 Journal Supplement Series, 2010.
