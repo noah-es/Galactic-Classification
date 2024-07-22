@@ -11,33 +11,67 @@ The classification of different types of galaxies is a crucial task in astrophys
 
 ## Deployment
 
-To deploy this project run the FDTD-last.py code.
+To deploy this project run the run.py code.
 
 ```bash
-  python FDTD-last.py
+  python run.py
 ```
 
 
-## Take a look
+## Data
 
-* General Conditions: The proposed example plays with dimensionlessness, to make the code more efficient. In our case, space and time are quantized in quanta of 1 unit, both spatial and temporal. In addition, the speed of light travels through a quantum of space in a quantum of time, so it is worth 1. This greatly simplifies the relationship between c, the wavelength and the frequency of light. 
+The \emph{dataset} used is from the scientific paper published in the journal The Astrophysical Journal Supplement Series in 2010 by Preethi B. Nair and Roberto G. Abraham (NA10) \emph{nair2010catalog}. It presents a catalogue of detailed visual classifications for 14 034 galaxies from the Sloan Digital Sky Survey (SDSS) Data Release 4 (DR4).
+Data Release 4 (DR4). That is, it shares origin with the GZ and GZ2 projects, as both \emph{surveys} were from the SDSS data.
 
-![General Conditions](Gif/General_Conditions.gif)
+The sample includes almost all spectroscopically observed galaxies in the \emph{redshift} range.
+$0,01 <z< 0,1$. In addition to the classical classes of galaxies, \emph{sub-classes} are recorded for more specific features such as the existence of bars, rings, lenses, tails, warps, and dust trails, among others. 
 
-* Frequency Conditions: Therefore, for this example, the following scenarios are considered, both divided by the cut-off frequency F<sub>0</sub>.
+In the general catalogue, a wealth of information is provided for each galaxy. From its $J2000ID$, the SDSS collaboration's preferred format for object identification, to its physical quantities, such as its °emph{redshift}, mass and age, luminosity, apparent magnitude, and many others. For obvious reasons, this information is not taken into account in this work, but a study on how to co-integrate images with numerical data is still pending in order to improve the analysis proposed here.
 
-![Frequency Conditions](Gif/Frequency_Conditions.gif)
+As for the visual catalogue, all images processed and catalogued using an external file are provided. In NA10 it is specified that although the images are in RGB format, the classification was carried out using only the G-band. 
 
-* High Frequency: An electromagnetic wave (components of the electric and magnetic field) of frequency 0.21 units can be seen travelling through space, colliding with a barrier (bounded by two vertical bars). The phenomena of reflection and transmission are noteworthy.
+They consist of images belonging to 15 different classes. This high number is due to the sensitivity of the classes. Remember that NA10 introduces more specific features, which naturally increases the number of classes. The symbology and meaning is given in the Annex. \ref{annex}. However, in this paper these TType subclasses will be grouped into 4 main classes: \emph{elliptic}, \emph{spiral}, \emph{lenticular (S0s)} and \emph{irregular}.
 
-![High Frequency](Gif/High_Frequency.gif)
+* TTypes 
 
-* Low Frequency: An electromagnetic wave (components of the electric and magnetic field) of frequency 0.04 units can be seen travelling through space, colliding with a barrier (bounded by two vertical bars). The phenomena of reflection and transmission are noteworthy.
+![Each Class](Code/Each_Class/Clases.jpg)
 
-![Low Frequency](Gif/Low_Frequency.gif)
+* Dataset Distribution
 
-It is logically observed that the wave with a higher frequency has an electrical size similar to the size of the barrier, which acts as a wall against the advancing electromagnetic wave. The transmission coefficient is very low. The wave practically dissipates after passing through the wall.
+![Dataset Distribution](Resultados/DS_Distribution_Corrupts.png)
 
- On the other hand, at lower frequencies, the electrical size of the wave is larger than the size of the barrier, thus not being an obstacle and practically not altering the displacement of the wave.
+![Splitting](Resultados/TRAIN (1).png)
 
-This is a clear example of how WiFis, or radio waves, work.
+
+* Histogram
+
+![Histogram](Code/Histogram/histograma.png)
+
+* Pre-Proccesing
+
+![Resize 128x128](Resultados/128x128.png)
+![Resize 224x224](Resultados/224x224.png)
+![Crop](Resultados/crop.png)
+
+* Data Augmentation
+
+![Data Augmentation](Code/Data Augmentation/data_augmentation.png)
+
+## Results
+
+In this section we will present the results obtained for each architecture used.
+In all the models we have used an Early-Stopping of patience 7 and monitor the validation loss. Moreover, in order to avoid class imbalance, 2100 images of each class are randomly taken in each training epoch. 
+
+
+
+* MobileNetV2
+
+![MobileNetV2](Resultados/Fotos_Prediccion.png)
+
+* EfficientNet
+
+![EfficientNet](Resultados/PrediccionesEN.png)
+
+* ConvNeXt Tiny
+
+![ConvNeXt Tiny](Resultados/PrediccionCNX.png)
