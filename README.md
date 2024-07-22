@@ -20,17 +20,17 @@ To deploy this project run the run.py code.
 
 ## Data
 
-The \emph{dataset} used is from the scientific paper published in the journal The Astrophysical Journal Supplement Series in 2010 by Preethi B. Nair and Roberto G. Abraham (NA10) \emph{nair2010catalog}. It presents a catalogue of detailed visual classifications for 14 034 galaxies from the Sloan Digital Sky Survey (SDSS) Data Release 4 (DR4).
-Data Release 4 (DR4). That is, it shares origin with the GZ and GZ2 projects, as both \emph{surveys} were from the SDSS data.
+The dataset used is from the scientific paper published in the journal The Astrophysical Journal Supplement Series in 2010 by Preethi B. Nair and Roberto G. Abraham (NA10) [1]. It presents a catalogue of detailed visual classifications for 14 034 galaxies from the Sloan Digital Sky Survey (SDSS) Data Release 4 (DR4).
+Data Release 4 (DR4). That is, it shares origin with the GZ and GZ2 projects, as both surveys were from the SDSS data.
 
-The sample includes almost all spectroscopically observed galaxies in the \emph{redshift} range.
-$0,01 <z< 0,1$. In addition to the classical classes of galaxies, \emph{sub-classes} are recorded for more specific features such as the existence of bars, rings, lenses, tails, warps, and dust trails, among others. 
+The sample includes almost all spectroscopically observed galaxies in the redshift range.
+0.01 < z < 0.1 . In addition to the classical classes of galaxies, sub-classes are recorded for more specific features such as the existence of bars, rings, lenses, tails, warps, and dust trails, among others. 
 
-In the general catalogue, a wealth of information is provided for each galaxy. From its $J2000ID$, the SDSS collaboration's preferred format for object identification, to its physical quantities, such as its °emph{redshift}, mass and age, luminosity, apparent magnitude, and many others. For obvious reasons, this information is not taken into account in this work, but a study on how to co-integrate images with numerical data is still pending in order to improve the analysis proposed here.
+In the general catalogue, a wealth of information is provided for each galaxy. From its J2000ID, the SDSS collaboration's preferred format for object identification, to its physical quantities, such as its redshift, mass and age, luminosity, apparent magnitude, and many others. For obvious reasons, this information is not taken into account in this work, but a study on how to co-integrate images with numerical data is still pending in order to improve the analysis proposed here.
 
 As for the visual catalogue, all images processed and catalogued using an external file are provided. In NA10 it is specified that although the images are in RGB format, the classification was carried out using only the G-band. 
 
-They consist of images belonging to 15 different classes. This high number is due to the sensitivity of the classes. Remember that NA10 introduces more specific features, which naturally increases the number of classes. The symbology and meaning is given in the Annex. \ref{annex}. However, in this paper these TType subclasses will be grouped into 4 main classes: \emph{elliptic}, \emph{spiral}, \emph{lenticular (S0s)} and \emph{irregular}.
+They consist of images belonging to 15 different classes. This high number is due to the sensitivity of the classes. Remember that NA10 introduces more specific features, which naturally increases the number of classes. However, in this paper these TType subclasses will be grouped into 3 main classes: elliptic, spiral and lenticular (S0s).
 ##
 * TTypes 
 
