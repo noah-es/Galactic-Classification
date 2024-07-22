@@ -40,7 +40,7 @@ They consist of images belonging to 15 different classes. This high number is du
 
 ![Dataset Distribution](Resultados/DS_Distribution_Corrupts.png)
 
-![Splitting](Resultados/TRAIN (1).png)
+![Splitting](Resultados/TRAIN%20(1).png)
 
 
 * Histogram
@@ -55,7 +55,7 @@ They consist of images belonging to 15 different classes. This high number is du
 
 * Data Augmentation
 
-![Data Augmentation](Code/Data Augmentation/data_augmentation.png)
+![Data Augmentation](Code/Data%20Augmentation/data_augmentation.png)
 
 ## Results
 
