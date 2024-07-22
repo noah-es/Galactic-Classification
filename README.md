@@ -74,3 +74,6 @@ In all the models we have used an Early-Stopping of patience 7 and monitor the v
 ## ConvNeXt Tiny
 
 ![ConvNeXt Tiny](Resultados/PrediccionCNX.png)
+
+## Bibliography
+1. Autor, Ejemplo, _Título del Libro_, Editorial Ejemplo, 2020.
