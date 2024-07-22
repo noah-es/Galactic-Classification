@@ -31,28 +31,28 @@ In the general catalogue, a wealth of information is provided for each galaxy. F
 As for the visual catalogue, all images processed and catalogued using an external file are provided. In NA10 it is specified that although the images are in RGB format, the classification was carried out using only the G-band. 
 
 They consist of images belonging to 15 different classes. This high number is due to the sensitivity of the classes. Remember that NA10 introduces more specific features, which naturally increases the number of classes. The symbology and meaning is given in the Annex. \ref{annex}. However, in this paper these TType subclasses will be grouped into 4 main classes: \emph{elliptic}, \emph{spiral}, \emph{lenticular (S0s)} and \emph{irregular}.
-
+##
 * TTypes 
 
 ![Each Class](Code/Each_Class/Clases.jpg)
-
+##
 * Dataset Distribution
 
 ![Dataset Distribution](Resultados/DS_Distribution_Corrupts.png)
 
 ![Splitting](Resultados/TRAIN%20(1).png)
 
-
+##
 * Histogram
 
 ![Histogram](Code/Histogram/histograma.png)
-
+##
 * Pre-Proccesing
 
 ![Resize 128x128](Resultados/128x128.png)
 ![Resize 224x224](Resultados/224x224.png)
 ![Crop](Resultados/crop.png)
-
+##
 * Data Augmentation
 
 ![Data Augmentation](Code/Data%20Augmentation/data_augmentation.png)
@@ -63,15 +63,14 @@ In this section we will present the results obtained for each architecture used.
 In all the models we have used an Early-Stopping of patience 7 and monitor the validation loss. Moreover, in order to avoid class imbalance, 2100 images of each class are randomly taken in each training epoch. 
 
 
-
-* MobileNetV2
+## MobileNetV2
 
 ![MobileNetV2](Resultados/Fotos_Prediccion.png)
 
-* EfficientNet
+## EfficientNet
 
 ![EfficientNet](Resultados/PrediccionesEN.png)
 
-* ConvNeXt Tiny
+## ConvNeXt Tiny
 
 ![ConvNeXt Tiny](Resultados/PrediccionCNX.png)
